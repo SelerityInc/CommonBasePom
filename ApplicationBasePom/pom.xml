@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2016 Selerity, Inc. (support@seleritycorp.com)
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.seleritycorp.pom</groupId>
+    <artifactId>LibraryBasePom</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath>../LibraryBasePom</relativePath>
+  </parent>
+
+  <groupId>com.seleritycorp.pom</groupId>
+  <artifactId>ApplicationBasePom</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>Application Base Pom</name>
+  <description>Common parent pom for Selerity applications</description>
+
+  <build>
+    <resources>
+      <!-- Repeating all resources due to bug MNG-2751 :-( -->
+      <resource>
+        <directory>${project.basedir}/src/main/resources</directory>
+        <excludes>
+          <exclude>jar-info/**/*</exclude>
+        </excludes>
+      </resource>
+
+      <!-- build information (version specific variant) -->
+      <resource>
+        <targetPath>META-INF/jar-info/${project.groupId}/${project.artifactId}/${project.version}</targetPath>
+        <filtering>true</filtering>
+        <directory>${project.basedir}/src/main/resources/jar-info</directory>
+      </resource>
+
+      <!-- build information (version agnostic variant) -->
+      <resource>
+        <targetPath>META-INF/jar-info/${project.groupId}/${project.artifactId}</targetPath>
+        <filtering>true</filtering>
+        <directory>${project.basedir}/src/main/resources/jar-info</directory>
+      </resource>
+
+      <!-- build information for the main application itself -->
+      <resource>
+        <targetPath>META-INF/main-application</targetPath>
+        <filtering>true</filtering>
+        <directory>${project.basedir}/src/main/resources/jar-info</directory>
+      </resource>
+    </resources>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>${project.groupId}.${project.artifactId}Main</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+</project>

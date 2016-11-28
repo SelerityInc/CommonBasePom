@@ -1,0 +1,22 @@
+# Ignored build files for main pom
+/target
+/pom.xml.releaseBackup
+/release.properties
+/.classpath
+/.project
+/.settings
+
+# Ignored build files for child poms
+*/target
+*/pom.xml.releaseBackup
+*/release.properties
+*/.classpath
+*/.project
+*/.settings
+
+# Ignored files from eventual runs of applications
+/conf-ansiblized
+/data
+
+# Ignored files for running applications
+/local-configs
