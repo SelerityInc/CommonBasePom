@@ -84,6 +84,7 @@
     <findbugs.version>3.0.1</findbugs.version>
     <groupon.version>1.0.0</groupon.version>
     <gson.version>2.6.2</gson.version>
+    <guava.version>15.0</guava.version>
     <guice.assistedinject.version>4.1.0</guice.assistedinject.version>
     <guice.version>4.1.0</guice.version>
     <http.client.version>4.5.2</http.client.version>
@@ -144,6 +145,11 @@
         <groupId>commons-logging</groupId>
         <artifactId>commons-logging</artifactId>
         <version>${commons.logging.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>${guava.version}</version>
       </dependency>
       <dependency>
         <groupId>log4j</groupId>
