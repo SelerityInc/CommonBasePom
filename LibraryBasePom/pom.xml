@@ -22,12 +22,12 @@
   <parent>
     <groupId>com.seleritycorp.pom</groupId>
     <artifactId>CommonBasePom</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3-SNAPSHOT</version>
   </parent>
 
   <groupId>com.seleritycorp.pom</groupId>
   <artifactId>LibraryBasePom</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.3-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Library Base Pom</name>
