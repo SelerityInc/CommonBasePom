@@ -254,7 +254,7 @@
     </dependencies>
   </dependencyManagement>
 
-  <dependencies />
+  <dependencies></dependencies>
 
   <repositories>
     <repository>
