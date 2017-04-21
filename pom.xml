@@ -121,6 +121,7 @@
     <powermock.version>1.6.6</powermock.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.organization.email>support@seleritycorp.com</project.organization.email>
+    <system_rules.version>1.16.1</system_rules.version>
   </properties>
 
   <dependencyManagement>
@@ -242,6 +243,12 @@
         <groupId>org.powermock</groupId>
         <artifactId>powermock-api-easymock</artifactId>
         <version>${powermock.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.github.stefanbirkner</groupId>
+        <artifactId>system-rules</artifactId>
+        <version>${system_rules.version}</version>
         <scope>test</scope>
       </dependency>
     </dependencies>
