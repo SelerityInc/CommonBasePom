@@ -496,6 +496,7 @@
               <exclude>src/test/resources/**</exclude>
               <exclude>src/main/resources/**</exclude>
               <exclude>local-configs/**</exclude>
+              <exclude>data/state/**</exclude>
             </excludes>
             <failIfUnknown>true</failIfUnknown>
             <headerDefinitions>
