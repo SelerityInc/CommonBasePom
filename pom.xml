@@ -21,7 +21,7 @@
 
   <groupId>com.seleritycorp.pom</groupId>
   <artifactId>CommonBasePom</artifactId>
-  <version>1.0.6-SNAPSHOT</version>
+  <version>1.0.6</version>
   <packaging>pom</packaging>
 
   <name>Common Base Pom</name>
@@ -59,7 +59,7 @@
   <scm>
     <connection>scm:git:github.com:SelerityInc/${project.artifactId}.git</connection>
     <developerConnection>scm:git:git@github.com:SelerityInc/${project.artifactId}.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>v1.0.6</tag>
     <url>https://github.com/SelerityInc/${project.artifactId}</url>
   </scm>
 
