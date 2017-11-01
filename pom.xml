@@ -25,7 +25,7 @@
   <packaging>pom</packaging>
 
   <name>Common Base Pom</name>
-  <description>Common parent pom for Selerity poms</description>
+  <description>Common parent pom for all Selerity poms</description>
 
   <url>https://github.com/SelerityInc/${project.artifactId}</url>
   <inceptionYear>2016</inceptionYear>
@@ -53,7 +53,7 @@
   </developers>
 
   <modules>
-    <module>LibraryBasePom</module>
+    <module>StandardBasePom</module>
   </modules>
 
   <scm>
@@ -543,27 +543,7 @@
       </plugins>
     </pluginManagement>
 
-    <plugins>
-      <plugin>
-        <groupId>com.mycila</groupId>
-        <artifactId>license-maven-plugin</artifactId>
-      </plugin>
-
-      <plugin>
-        <groupId>pl.project13.maven</groupId>
-        <artifactId>git-commit-id-plugin</artifactId>
-      </plugin>
-
-      <plugin>
-        <groupId>com.github.ekryd.sortpom</groupId>
-        <artifactId>sortpom-maven-plugin</artifactId>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-release-plugin</artifactId>
-      </plugin>
-    </plugins>
+    <plugins></plugins>
   </build>
 
   <profiles>

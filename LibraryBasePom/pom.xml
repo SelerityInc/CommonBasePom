@@ -21,8 +21,9 @@
 
   <parent>
     <groupId>com.seleritycorp.pom</groupId>
-    <artifactId>CommonBasePom</artifactId>
+    <artifactId>StandardBasePom</artifactId>
     <version>1.0.8-SNAPSHOT</version>
+    <relativePath>../StandardBasePom</relativePath>
   </parent>
 
   <groupId>com.seleritycorp.pom</groupId>
