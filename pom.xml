@@ -306,6 +306,9 @@
           <configuration>
             <source>${java.version}</source>
             <target>${java.version}</target>
+            <showDeprecation>true</showDeprecation>
+            <showWarnings>true</showWarnings>
+            <compilerArgument>-Xlint:all</compilerArgument>
           </configuration>
         </plugin>
 
