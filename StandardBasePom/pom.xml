@@ -37,7 +37,7 @@
     <module>../LibraryBasePom</module>
   </modules>
 
-  <dependencies></dependencies>
+  <dependencies />
 
   <build>
     <plugins>

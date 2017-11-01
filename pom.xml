@@ -472,6 +472,7 @@
             <sortProperties>true</sortProperties>
             <verifyFail>Stop</verifyFail>
             <createBackupFile>false</createBackupFile>
+            <expandEmptyElements>false</expandEmptyElements>
           </configuration>
           <executions>
             <execution>
