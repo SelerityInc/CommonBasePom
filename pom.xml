@@ -107,6 +107,7 @@
     <plugin.checkstyle.version>2.17</plugin.checkstyle.version>
     <plugin.compiler.version>3.2</plugin.compiler.version>
     <plugin.deploy.version>2.8.2</plugin.deploy.version>
+    <plugin.enforcer.version>3.0.0-M1</plugin.enforcer.version>
     <plugin.findbugs.version>3.0.3</plugin.findbugs.version>
     <plugin.git_commit_id.version>2.1.12</plugin.git_commit_id.version>
     <plugin.gpg.version>1.6</plugin.gpg.version>
@@ -540,9 +541,38 @@
             <tagNameFormat>v@{project.version}</tagNameFormat>
             <goals>deploy</goals>
             <releaseProfiles>release</releaseProfiles>
-            <preparationGoals>sortpom:verify clean verify</preparationGoals>
+            <!--
+            If you've stranded here because Maven complained about not being able to find goal
+            `enforce@release-rules`, update Maven to at least 3.3.1, which is the first version
+            to allow running named executions.
+            -->
+            <preparationGoals>sortpom:verify clean verify enforcer:enforce@release-rules</preparationGoals>
             <arguments>-Prelease</arguments>
+            <scmCommentPrefix xml:space="preserve">Release: </scmCommentPrefix>
           </configuration>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-enforcer-plugin</artifactId>
+          <version>${plugin.enforcer.version}</version>
+          <executions>
+            <execution>
+              <id>release-rules</id>
+              <goals>
+                <goal>enforce</goal>
+              </goals>
+              <configuration>
+                <rules>
+                  <requireMavenVersion>
+                      <!-- 3.1.0 needed to allow xml:space="preserve" (MNG-5380) -->
+                      <!-- 3.3.1 needed to allow running named executions (MNG-5768) -->
+                    <version>3.3.1</version>
+                  </requireMavenVersion>
+                </rules>
+              </configuration>
+            </execution>
+          </executions>
         </plugin>
       </plugins>
     </pluginManagement>
