@@ -509,6 +509,7 @@
               <exclude>src/main/resources/**</exclude>
               <exclude>local-configs/**</exclude>
               <exclude>data/state/**</exclude>
+              <exclude>**/conf</exclude>
             </excludes>
             <failIfUnknown>true</failIfUnknown>
             <headerDefinitions>
