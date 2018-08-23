@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright (C) 2016-2017 Selerity, Inc. (support@seleritycorp.com)
+    Copyright (C) 2016-2018 Selerity, Inc. (support@seleritycorp.com)
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -114,6 +114,8 @@
     <plugin.jar.version>2.4</plugin.jar.version>
     <plugin.javadoc.version>2.10.3</plugin.javadoc.version>
     <plugin.license.version>3.0</plugin.license.version>
+    <plugin.license.header>conf/maven/license/template-apache-2.txt</plugin.license.header>
+    <plugin.license.headerDefinition>conf/maven/license/style-slashstar-trailing-nl.xml</plugin.license.headerDefinition>
     <plugin.release.version>2.5.3</plugin.release.version>
     <plugin.shade.version>2.0</plugin.shade.version>
     <plugin.sortpom.version>2.4.0</plugin.sortpom.version>
@@ -492,7 +494,7 @@
           <artifactId>license-maven-plugin</artifactId>
           <version>${plugin.license.version}</version>
           <configuration>
-            <header>conf/maven/license/template-apache-2.txt</header>
+            <header>${plugin.license.header}</header>
             <properties>
               <owner>${project.organization.name}</owner>
               <email>${project.organization.email}</email>
@@ -508,11 +510,10 @@
               <exclude>src/main/resources/**</exclude>
               <exclude>local-configs/**</exclude>
               <exclude>data/state/**</exclude>
-              <exclude>**/conf</exclude>
             </excludes>
             <failIfUnknown>true</failIfUnknown>
             <headerDefinitions>
-              <headerDefinition>conf/maven/license/style-slashstar-trailing-nl.xml</headerDefinition>
+              <headerDefinition>${plugin.license.headerDefinition}</headerDefinition>
             </headerDefinitions>
           </configuration>
           <dependencies>
