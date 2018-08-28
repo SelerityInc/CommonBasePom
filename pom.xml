@@ -99,7 +99,7 @@
     <guava.version>23.3</guava.version>
     <guice.assistedinject.version>4.1.0</guice.assistedinject.version>
     <guice.version>4.1.0</guice.version>
-    <http.client.version>4.5.2</http.client.version>
+    <http.client.version>4.5.6</http.client.version>
     <java.version>1.8</java.version>
     <jetty.version>9.2.21.v20170120</jetty.version>
     <junit.version>4.11</junit.version>
