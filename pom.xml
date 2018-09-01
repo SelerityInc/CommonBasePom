@@ -113,9 +113,9 @@
     <plugin.gpg.version>1.6</plugin.gpg.version>
     <plugin.jar.version>2.4</plugin.jar.version>
     <plugin.javadoc.version>2.10.3</plugin.javadoc.version>
-    <plugin.license.version>3.0</plugin.license.version>
     <plugin.license.header>conf/maven/license/template-apache-2.txt</plugin.license.header>
     <plugin.license.headerDefinition>conf/maven/license/style-slashstar-trailing-nl.xml</plugin.license.headerDefinition>
+    <plugin.license.version>3.0</plugin.license.version>
     <plugin.release.version>2.5.3</plugin.release.version>
     <plugin.shade.version>2.0</plugin.shade.version>
     <plugin.sortpom.version>2.4.0</plugin.sortpom.version>
@@ -566,8 +566,8 @@
               <configuration>
                 <rules>
                   <requireMavenVersion>
-                      <!-- 3.1.0 needed to allow xml:space="preserve" (MNG-5380) -->
-                      <!-- 3.3.1 needed to allow running named executions (MNG-5768) -->
+                    <!-- 3.1.0 needed to allow xml:space="preserve" (MNG-5380) -->
+                    <!-- 3.3.1 needed to allow running named executions (MNG-5768) -->
                     <version>3.3.1</version>
                   </requireMavenVersion>
                 </rules>
